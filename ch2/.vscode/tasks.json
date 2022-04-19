@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {// 任务1——make
+            "type": "shell",
+            "label": "let's make",   // 任务名
+            "command": "make",       // 命令行调用
+            "options": {
+                "cwd": "${workspaceFolder}/build"  // 在 build/ 目录中执行
+            },
+            "dependsOn": "let's cmake"           // 依赖哪个任务的执行结果
+        },
+        {// 任务2——cmake
+            "type": "shell",
+            "label": "let's cmake",  // 任务名
+            "command": "cmake",      // 命令行调用
+            "args": [                // 命令行参数
+                "../"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"  // 在 build/ 目录中执行
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "let's debug",          // debug 文件名
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/useHello",  // 构建后的可执行文件（只能写一个）
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "let's make",  // 执行调试的前置任务名
+            "MIMode": "gdb",               // Linux填gdb（与哪个 debugger 通信）
+        }
+    ]
+}
